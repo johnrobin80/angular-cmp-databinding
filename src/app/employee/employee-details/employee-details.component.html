@@ -1,0 +1,19 @@
+<p>employee-details works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <a
+        href="#"
+        class="list-group-item clearfix"
+        *ngFor="let employee of employeedetails"
+      >
+        <div class="pull-left">
+          <p class="list-group-item-heading">Employee</p>
+          <p class="list-group-item-text">{{ employee.firstName }}</p>
+          <p class="list-group-item-text">{{ employee.lastName }}</p>
+          <p class="list-group-item-text">{{ employee.phone }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <app-phase1
+    (serverCreated)="onServerAdded($event)"
+    (bluePrintCreated)="onBlueprintAdded($event)"
+  ></app-phase1>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <app-phase2
+        *ngFor="let serverelement of serverElements"
+        [srvElement]="serverelement"
+      ></app-phase2>
+    </div>
+  </div>
+  <hr />
+  <app-employee></app-employee>
+</div>
