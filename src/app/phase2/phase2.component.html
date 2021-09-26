@@ -1,10 +1,11 @@
 <p>phase2 works!</p>
 <div class="row">
-  <div class="col-xs-12">
-    <div class="panel panel-default">
-      <div class="panel-heading">{{ element.name }}</div>
-      <div class="panel-body">
-        <p>
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{ element.name }}</div>
+            <div class="panel-body">
+                <ng-content></ng-content>
+                <!--<p>
           <strong *ngIf="element.type === 'red'" style="color: red">{{
             element.content
           }}</strong>
@@ -12,12 +13,10 @@
             element.content
           }}</strong>
           {{ element.content }}
-          <!--<em>{{ element.content }}</em>-->
-          <!--<em *ngIf="element.type === 'blueprint'">{{ element.type }}</em>-->
-        </p>
-        <label>MENA ASSISTANCE 1</label>
-      </div>
+        </p>-->
+                <label>MENA ASSISTANCE 1</label>
+            </div>
+        </div>
     </div>
-  </div>
-  <label>MENA ASSISTANCE 2</label>
+    <label>MENA ASSISTANCE 2</label>
 </div>
