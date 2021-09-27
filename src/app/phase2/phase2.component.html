@@ -1,11 +1,12 @@
 <p>phase2 works!</p>
 <div class="row">
-    <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">{{ element.name }}</div>
-            <div class="panel-body">
-                <ng-content></ng-content>
-                <!--<p>
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <!--<div class="panel-heading">{{ element.name }}</div>-->
+      <div class="panel-heading">{{ name }}</div>
+      <div class="panel-body">
+        <ng-content></ng-content>
+        <!--<p>
           <strong *ngIf="element.type === 'red'" style="color: red">{{
             element.content
           }}</strong>
@@ -14,9 +15,9 @@
           }}</strong>
           {{ element.content }}
         </p>-->
-                <label>MENA ASSISTANCE 1</label>
-            </div>
-        </div>
+        <label>MENA ASSISTANCE 1</label>
+      </div>
     </div>
-    <label>MENA ASSISTANCE 2</label>
+  </div>
+  <label>MENA ASSISTANCE 2</label>
 </div>

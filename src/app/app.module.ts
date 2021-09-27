@@ -10,7 +10,13 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeDetailsComponent } from './employee/employee-details/employee-details.component';
 
 @NgModule({
-  declarations: [AppComponent, Phase1Component, Phase2Component, EmployeeComponent, EmployeeDetailsComponent],
+  declarations: [
+    AppComponent,
+    Phase1Component,
+    Phase2Component,
+    EmployeeComponent,
+    EmployeeDetailsComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
