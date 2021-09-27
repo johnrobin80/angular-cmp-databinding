@@ -30,6 +30,11 @@ export class AppComponent {
     });
   }
 
+  onChangeFirst() {
+    this.serverElements[0].name = 'Changed';
+    console.log('Clicked......onChangeFirst');
+  }
+
   constructor() {}
 
   ngOnInit() {}

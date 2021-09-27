@@ -1,27 +1,23 @@
 <div class="container">
-  <app-phase1
-    (serverCreated)="onServerAdded($event)"
-    (bluePrintCreated)="onBlueprintAdded($event)"
-  ></app-phase1>
-  <hr />
-  <div class="row">
-    <div class="col-xs-12">
-      <app-phase2
-        *ngFor="let serverelement of serverElements"
-        [srvElement]="serverelement"
-      >
-        <p>
-          <strong *ngIf="serverelement.type === 'red'" style="color: red">{{
+    <app-phase1 (serverCreated)="onServerAdded($event)" (bluePrintCreated)="onBlueprintAdded($event)"></app-phase1>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-primary" (click)="onChangeFirst()">
+        onChangeFirst
+      </button>
+            <app-phase2 *ngFor="let serverelement of serverElements" [srvElement]="serverelement" [name]="serverelement.name">
+                <p>
+                    <strong *ngIf="serverelement.type === 'red'" style="color: red">{{
             serverelement.content
           }}</strong>
-          <strong *ngIf="serverelement.type === 'blue'" style="color: blue">{{
+                    <strong *ngIf="serverelement.type === 'blue'" style="color: blue">{{
             serverelement.content
-          }}</strong>
-          {{ serverelement.content }}
-        </p>
-      </app-phase2>
+          }}</strong> {{ serverelement.content }}
+                </p>
+            </app-phase2>
+        </div>
     </div>
-  </div>
-  <hr />
-  <app-employee></app-employee>
+    <hr />
+    <app-employee></app-employee>
 </div>

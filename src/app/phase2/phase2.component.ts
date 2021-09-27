@@ -1,4 +1,11 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewEncapsulation,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'app-phase2',
@@ -6,9 +13,20 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./phase2.component.css'],
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class Phase2Component implements OnInit {
+export class Phase2Component implements OnInit, OnChanges {
   @Input('srvElement') element: { type: string; name: string; content: string };
-  constructor() {}
+  @Input() name: string;
 
-  ngOnInit(): void {}
+  constructor() {
+    console.log('constructor called');
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges called');
+    console.log(changes);
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit called');
+  }
 }
