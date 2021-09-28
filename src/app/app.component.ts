@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-cmp-databinding';
+  title = 'angular';
   serverElements = [
     { type: 'server1', name: 'TestServer1', content: 'Just a test1' },
   ];
@@ -31,8 +31,15 @@ export class AppComponent {
   }
 
   onChangeFirst() {
+    //var indexVal: Number;
     this.serverElements[0].name = 'Changed';
     console.log('Clicked......onChangeFirst');
+    //indexVal = +indexVal + 1;
+  }
+
+  onDestroyFirst() {
+    this.serverElements.splice(0, 1);
+    console.log('Clicked......onDestroyFirst');
   }
 
   constructor() {}
