@@ -33,4 +33,20 @@
       ></app-game-control>
     </div>
   </div>
+  <div class="row mt-3">
+    <div class="col-xl-12">
+      <p><u>List Odd Values</u></p>
+      <app-odd *ngFor="let oddVal of oddNumbers" [oddNumber]="oddVal"></app-odd>
+      <app-even
+        *ngFor="let evenVal of evenNumbers"
+        [evenNumber]="evenVal"
+      ></app-even>
+    </div>
+  </div>
+  <!--<div class="row mt-3">
+    <div class="col-xl-12">
+      <p><u>List Even Values</u></p>
+      <app-even *ngFor="let evenVal of evenNumbers" [evenNumber]="evenVal"></app-even>
+    </div>
+  </div>-->
 </div>

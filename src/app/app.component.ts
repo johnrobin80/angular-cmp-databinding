@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular';
+  title = 'AngularLearning';
   serverElements = [
     { type: 'server1', name: 'TestServer1', content: 'Just a test1' },
   ];
+
+  oddNumbers: Number[] = [];
+  evenNumbers: Number[] = [];
 
   onServerAdded(serverData: { serverName: string; serverContent: string }) {
     this.serverElements.push({
@@ -47,6 +50,11 @@ export class AppComponent {
   ngOnInit() {}
 
   onIntervalFired(firedNumber: number) {
+    if (firedNumber % 2 === 0) {
+      this.evenNumbers.push(firedNumber);
+    } else {
+      this.oddNumbers.push(firedNumber);
+    }
     console.log(firedNumber);
   }
 }
