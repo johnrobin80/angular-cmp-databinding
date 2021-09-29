@@ -45,4 +45,8 @@ export class AppComponent {
   constructor() {}
 
   ngOnInit() {}
+
+  onIntervalFired(firedNumber: number) {
+    console.log(firedNumber);
+  }
 }

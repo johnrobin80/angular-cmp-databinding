@@ -1,4 +1,5 @@
 <div class="container">
+  <!--
     <app-phase1 (serverCreated)="onServerAdded($event)" (bluePrintCreated)="onBlueprintAdded($event)"></app-phase1>
     <hr />
     <div class="row">
@@ -24,10 +25,12 @@
     <hr />
     <app-employee></app-employee>
     <hr />
-
-    <div class="row">
-        <div class="col-xl-12">
-            <app-game-control></app-game-control>
-        </div>
+-->
+  <div class="row">
+    <div class="col-xl-12">
+      <app-game-control
+        (intervalFired)="onIntervalFired($event)"
+      ></app-game-control>
     </div>
+  </div>
 </div>
